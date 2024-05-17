@@ -41,6 +41,7 @@ RUN echo 'date.timezone = GMT' >> /usr/local/etc/php/conf.d/docker.ini \
     && echo 'session.cookie_httponly = 1' >> /usr/local/etc/php/conf.d/docker.ini \
     && echo 'session.use_trans_sid = 0' >> /usr/local/etc/php/conf.d/docker.ini \
     && echo 'session.save_handler = redis' >> /usr/local/etc/php/conf.d/docker.ini \
+    && echo 'session.auto_start = On' >> /usr/local/etc/php/conf.d/docker.ini \
     && echo 'session.save_path = "tcp://sugar-redis:6379"' >> /usr/local/etc/php/conf.d/docker.ini \
     && echo 'auto_prepend_file = "/usr/local/php/prepend.php"' >> /usr/local/etc/php/conf.d/docker.ini
 
